@@ -28,7 +28,7 @@ public class decompressZip {
     }
   
     public String unZip(){
-        boolean result = false; 
+        boolean result = true; 
         String  message = "Hi Deepak" ;
         try {
             result = this.doUnZip(this.targetPath);
