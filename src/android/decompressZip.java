@@ -21,30 +21,20 @@ public class decompressZip {
     private String targetPath   = "";
     private final int BUFFER_SIZE = 2048;
 
-
     public decompressZip(JSONObject opts) {
         this.sourceEntry    = opts.optString("sourceEntry");
         this.targetPath     = opts.optString("targetPath");
     }
-  
-    public String unZip(){
-        boolean result = true; 
-        String  message = "Hi Deepak" ;
+    
+    public boolean unZip(){
+        boolean result = false;
         try {
             result = this.doUnZip(this.targetPath);
-            If result = true
-                {
-                message = "Pass";
-                }
-         
         } catch (IOException e) {
-            throw new MyException(ex.getMessage());
-            result = False;
-            message = "Failed";
+            result = false;
         }
         //return result;
-       return message;
-        
+        return true;
     }
     
     /**
