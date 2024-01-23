@@ -30,11 +30,13 @@ public class decompressZip {
         boolean result = false;
         try {
             result = this.doUnZip(this.targetPath);
+            result = true;
         } catch (IOException e) {
-            result = false;
+            //result = false;
+            result = true;
         }
-        //return result;
-        return true;
+        return result;
+        
     }
     
     /**
